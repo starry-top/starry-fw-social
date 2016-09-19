@@ -23,7 +23,7 @@ public class StarryConnectionFactory extends OAuth2ConnectionFactory<Starry> {
      * @param appNamespace The application's App Namespace as configured with Facebook. Enables use of Open Graph operations.
      */
     public StarryConnectionFactory(String appId, String appSecret, String appNamespace) {
-        super("Starry", new StarryServiceProvider(appId, appSecret, appNamespace), new StarryAdapter());
+        super("starry", new StarryServiceProvider(appId, appSecret, appNamespace), new StarryAdapter());
     }
 
 }
