@@ -19,5 +19,14 @@
   </properties>
 
   <dependencies>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>com.github.starry-top</groupId>
+      <artifactId>starry-fw-social-starry</artifactId>
+    </dependency>
   </dependencies>
 </project>
