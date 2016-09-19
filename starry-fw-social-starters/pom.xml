@@ -4,21 +4,26 @@
 
   <parent>
     <groupId>com.github.starry-top</groupId>
-    <artifactId>starry-fw-social-starters</artifactId>
+    <artifactId>starry-fw-social-parent</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <relativePath>../pom.xml</relativePath>
   </parent>
 
-  <groupId>com.github.starry-top</groupId>
-  <artifactId>starry-fw-social-starters-starry</artifactId>
-  <packaging>jar</packaging>
+  <artifactId>starry-fw-social-starters</artifactId>
+  <packaging>pom</packaging>
 
-  <name>Starry Framework Social For Starry Starter Library</name>
+  <name>Starry Framework Social</name>
   <url>https://github.com/starry-top/starry-fw-social</url>
+  <description>The parent of Starry Framework Social Starters</description>
 
   <properties>
   </properties>
 
-  <dependencies>
-  </dependencies>
+  <dependencyManagement>
+  </dependencyManagement>
+
+  <modules>
+    <module>starry-fw-social-starters-starry</module>
+  </modules>
+
 </project>
