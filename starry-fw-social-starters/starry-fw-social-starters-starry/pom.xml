@@ -9,7 +9,6 @@
     <relativePath>../pom.xml</relativePath>
   </parent>
 
-  <groupId>com.github.starry-top</groupId>
   <artifactId>starry-fw-social-starters-starry</artifactId>
   <packaging>jar</packaging>
 
