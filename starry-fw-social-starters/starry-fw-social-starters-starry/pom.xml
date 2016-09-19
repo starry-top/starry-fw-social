@@ -19,5 +19,14 @@
   </properties>
 
   <dependencies>
+    <dependency>
+      <groupId>com.github.starry-top</groupId>
+      <artifactId>starry-fw-social-starry</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>com.github.starry-top</groupId>
+      <artifactId>starry-fw-social-autoconfigure-starry</artifactId>
+    </dependency>
   </dependencies>
 </project>
