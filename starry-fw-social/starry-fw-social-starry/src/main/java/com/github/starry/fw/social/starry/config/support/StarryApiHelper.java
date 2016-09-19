@@ -1,7 +1,7 @@
 package com.github.starry.fw.social.starry.config.support;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.social.UserIdSource;
 import org.springframework.social.config.xml.ApiHelper;
 import org.springframework.social.connect.Connection;
@@ -27,11 +27,11 @@ public class StarryApiHelper implements ApiHelper<Starry> {
 
         Connection<Starry> connection = usersConnectionRepository.createConnectionRepository(userIdSource.getUserId()).findPrimaryConnection(Starry.class);
         if (logger.isDebugEnabled() && connection == null) {
-            logger.debug("No current connection; Returning default FacebookTemplate instance.");
+            logger.debug("No current connection; Returning default StarryTemplate instance.");
         }
         return connection != null ? connection.getApi() : null;
     }
 
-    private final static Log logger = LogFactory.getLog(StarryApiHelper.class);
+    private static final Logger logger = LoggerFactory.getLogger(StarryApiHelper.class);
 
 }
