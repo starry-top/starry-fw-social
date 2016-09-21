@@ -22,12 +22,12 @@ public class WechatApiHelper implements ApiHelper<Wechat> {
 
     public Wechat getApi() {
         if (logger.isDebugEnabled()) {
-            logger.debug("Getting API binding instance for Starry");
+            logger.debug("Getting API binding instance for Wechat");
         }
 
         Connection<Wechat> connection = usersConnectionRepository.createConnectionRepository(userIdSource.getUserId()).findPrimaryConnection(Wechat.class);
         if (logger.isDebugEnabled() && connection == null) {
-            logger.debug("No current connection; Returning default StarryTemplate instance.");
+            logger.debug("No current connection; Returning default WechatTemplate instance.");
         }
         return connection != null ? connection.getApi() : null;
     }

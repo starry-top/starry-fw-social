@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-    xmlns:starry="http://github.com/starry-top/starry-fw-social/schema/social/starry"
-    targetNamespace="http://github.com/starry-top/starry-fw-social/schema/social/starry">
+    xmlns:wechat="http://github.com/starry-top/starry-fw-social/schema/social/wechat"
+    targetNamespace="http://github.com/starry-top/starry-fw-social/schema/social/wechat">
 
     <xs:element name="config">
         <xs:complexType>
