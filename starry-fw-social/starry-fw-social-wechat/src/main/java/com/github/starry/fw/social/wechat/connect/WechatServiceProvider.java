@@ -1,12 +1,12 @@
-package com.github.starry.fw.social.starry.connect;
+package com.github.starry.fw.social.wechat.connect;
 
 import org.springframework.social.oauth2.AbstractOAuth2ServiceProvider;
 import org.springframework.social.oauth2.OAuth2Template;
 
-import com.github.starry.fw.social.starry.api.Starry;
-import com.github.starry.fw.social.starry.api.impl.StarryTemplate;
+import com.github.starry.fw.social.wechat.api.Wechat;
+import com.github.starry.fw.social.wechat.api.impl.WechatTemplate;
 
-public class StarryServiceProvider extends AbstractOAuth2ServiceProvider<Starry> {
+public class WechatServiceProvider extends AbstractOAuth2ServiceProvider<Wechat> {
 
     private String appNamespace;
 
@@ -16,7 +16,7 @@ public class StarryServiceProvider extends AbstractOAuth2ServiceProvider<Starry>
      * @param appSecret The application's App Secret as assigned by Facebook
      * @param appNamespace The application's App Namespace as configured with Facebook. Enables use of Open Graph operations.
      */
-    public StarryServiceProvider(String appId, String appSecret, String appNamespace) {
+    public WechatServiceProvider(String appId, String appSecret, String appNamespace) {
         super(getOAuth2Template(appId, appSecret));
         this.appNamespace = appNamespace;
     }
@@ -31,8 +31,8 @@ public class StarryServiceProvider extends AbstractOAuth2ServiceProvider<Starry>
 
     // http://localhost:8081/me
 
-    public Starry getApi(String accessToken) {
-        return new StarryTemplate(accessToken, appNamespace);
+    public Wechat getApi(String accessToken) {
+        return new WechatTemplate(accessToken, appNamespace);
     }
 
 }

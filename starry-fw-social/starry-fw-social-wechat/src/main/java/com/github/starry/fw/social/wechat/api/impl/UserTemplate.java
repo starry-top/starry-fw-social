@@ -1,9 +1,9 @@
-package com.github.starry.fw.social.starry.api.impl;
+package com.github.starry.fw.social.wechat.api.impl;
 
 import org.springframework.web.client.RestTemplate;
 
-import com.github.starry.fw.social.starry.api.User;
-import com.github.starry.fw.social.starry.api.UserOperations;
+import com.github.starry.fw.social.wechat.api.User;
+import com.github.starry.fw.social.wechat.api.UserOperations;
 
 public class UserTemplate implements UserOperations {
 

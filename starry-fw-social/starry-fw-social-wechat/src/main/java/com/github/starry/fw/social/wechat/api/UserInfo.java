@@ -1,4 +1,4 @@
-package com.github.starry.fw.social.starry.api;
+package com.github.starry.fw.social.wechat.api;
 
 import java.io.Serializable;
 
