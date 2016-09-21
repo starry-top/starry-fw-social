@@ -9,10 +9,10 @@
     <relativePath>../pom.xml</relativePath>
   </parent>
 
-  <artifactId>starry-fw-social-autoconfigure-starry</artifactId>
+  <artifactId>starry-fw-social-autoconfigure-wechat</artifactId>
   <packaging>jar</packaging>
 
-  <name>Starry Framework Social For Starry AutoConfigure Library</name>
+  <name>Starry Framework Social For WeChat AutoConfigure Library</name>
   <url>https://github.com/starry-top/starry-fw-social</url>
 
   <properties>
@@ -31,7 +31,7 @@
 
     <dependency>
       <groupId>com.github.starry-top</groupId>
-      <artifactId>starry-fw-social-starry</artifactId>
+      <artifactId>starry-fw-social-wechat</artifactId>
     </dependency>
   </dependencies>
 </project>

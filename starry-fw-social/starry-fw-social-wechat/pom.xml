@@ -9,10 +9,10 @@
     <relativePath>../pom.xml</relativePath>
   </parent>
 
-  <artifactId>starry-fw-social-starry</artifactId>
+  <artifactId>starry-fw-social-wechat</artifactId>
   <packaging>jar</packaging>
 
-  <name>Starry Framework Social For Starry Library</name>
+  <name>Starry Framework Social For WeChat Library</name>
   <url>https://github.com/starry-top/starry-fw-social</url>
 
   <properties>
