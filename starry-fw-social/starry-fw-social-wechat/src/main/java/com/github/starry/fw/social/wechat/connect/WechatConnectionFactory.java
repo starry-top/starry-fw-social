@@ -1,10 +1,9 @@
 package com.github.starry.fw.social.wechat.connect;
 
-import org.springframework.social.connect.support.OAuth2ConnectionFactory;
-
 import com.github.starry.fw.social.wechat.api.Wechat;
+import com.github.starry.fw.social.wechat.connect.extend.OAuth2ConnectionFactoryEx;
 
-public class WechatConnectionFactory extends OAuth2ConnectionFactory<Wechat> {
+public class WechatConnectionFactory extends OAuth2ConnectionFactoryEx<Wechat> {
 
     /**
      * Creates a WechatConnectionFactory for the given application ID and secret.

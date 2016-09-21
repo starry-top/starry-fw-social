@@ -9,33 +9,35 @@ import org.springframework.social.support.URIBuilder;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
 
-import com.github.starry.fw.social.wechat.api.UserOperations;
+import com.github.starry.fw.social.wechat.api.SnsOperations;
 import com.github.starry.fw.social.wechat.api.Wechat;
 
 public class WechatTemplate extends AbstractOAuth2ApiBinding implements Wechat {
 
     private String appId;
     private String applicationNamespace;
+    private String openId;
 
-    private UserOperations userOperations;
+    private SnsOperations snsOperations;
 
     /**
      * Create a new instance of FacebookTemplate.
      * This constructor creates the FacebookTemplate using a given access token.
      * @param accessToken An access token given by Facebook after a successful OAuth 2 authentication (or through Facebook's JS library).
      */
-    public WechatTemplate(String accessToken) {
-        this(accessToken, null);
+    public WechatTemplate(String accessToken, String openId) {
+        this(accessToken, openId, null);
     }
 
-    public WechatTemplate(String accessToken, String applicationNamespace) {
-        this(accessToken, applicationNamespace, null);
+    public WechatTemplate(String accessToken, String openId,String applicationNamespace) {
+        this(accessToken, openId, applicationNamespace, null);
     }
 
-    public WechatTemplate(String accessToken, String applicationNamespace, String appId) {
+    public WechatTemplate(String accessToken, String openId, String applicationNamespace, String appId) {
         super(accessToken);
         this.applicationNamespace = applicationNamespace;
         this.appId = appId;
+        this.openId = openId;
         //initialize();
     }
 
@@ -53,11 +55,11 @@ public class WechatTemplate extends AbstractOAuth2ApiBinding implements Wechat {
      }
 
      private void initSubApis() {
-         userOperations = new UserTemplate(getRestTemplate());
+         snsOperations = new SnsTemplate(this,getRestTemplate());
      }
 
-     public UserOperations userOperations() {
-         return userOperations;
+     public SnsOperations snsOperations() {
+         return snsOperations;
      }
 
      // low-level Graph API operations
@@ -92,7 +94,11 @@ public class WechatTemplate extends AbstractOAuth2ApiBinding implements Wechat {
      }
 
      public String getBaseGraphApiUrl() {
-         return "http://localhost:8081/server/";
+         return "https://api.weixin.qq.com/";
      }
+
+    public String getOpenId() {
+        return openId;
+    }
 
 }
