@@ -103,7 +103,7 @@ public class OAuth2ConnectionEx<A> extends AbstractConnection<A> {
 
     public ConnectionData createData() {
         synchronized (getMonitor()) {
-            return new ConnectionData(getKey().getProviderId(), getKey().getProviderUserId(), getDisplayName(), getProfileUrl(), getImageUrl(), accessToken, null, refreshToken, expireTime);
+            return new ConnectionDataEx(getKey().getProviderId(), getKey().getProviderUserId(), getDisplayName(), getProfileUrl(), getImageUrl(), accessToken, null, refreshToken, expireTime, openId);
         }
     }
 
