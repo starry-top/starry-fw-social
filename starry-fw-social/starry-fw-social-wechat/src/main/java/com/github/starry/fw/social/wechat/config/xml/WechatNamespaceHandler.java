@@ -1,13 +1,13 @@
-package com.github.starry.fw.social.starry.config.xml;
+package com.github.starry.fw.social.wechat.config.xml;
 
 import org.springframework.social.config.xml.AbstractProviderConfigBeanDefinitionParser;
 import org.springframework.social.config.xml.AbstractProviderConfigNamespaceHandler;
 
-public class StarryNamespaceHandler extends AbstractProviderConfigNamespaceHandler {
+public class WechatNamespaceHandler extends AbstractProviderConfigNamespaceHandler {
 
     @Override
     protected AbstractProviderConfigBeanDefinitionParser getProviderConfigBeanDefinitionParser() {
-        return new StarryConfigBeanDefinitionParser();
+        return new WechatConfigBeanDefinitionParser();
     }
 
 }

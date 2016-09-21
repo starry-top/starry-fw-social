@@ -1,9 +1,9 @@
-package com.github.starry.fw.social.autoconfigure.starry;
+package com.github.starry.fw.social.autoconfigure.wechat;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
 @ConfigurationProperties("starry.social.starry")
-public class StarryProperties {
+public class WechatProperties {
 
     /**
      * Application id.

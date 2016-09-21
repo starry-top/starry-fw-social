@@ -1,4 +1,4 @@
-package com.github.starry.fw.social.starry.api.impl;
+package com.github.starry.fw.social.wechat.api.impl;
 
 import java.net.URI;
 
@@ -9,10 +9,10 @@ import org.springframework.social.support.URIBuilder;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
 
-import com.github.starry.fw.social.starry.api.Starry;
-import com.github.starry.fw.social.starry.api.UserOperations;
+import com.github.starry.fw.social.wechat.api.UserOperations;
+import com.github.starry.fw.social.wechat.api.Wechat;
 
-public class StarryTemplate extends AbstractOAuth2ApiBinding implements Starry {
+public class WechatTemplate extends AbstractOAuth2ApiBinding implements Wechat {
 
     private String appId;
     private String applicationNamespace;
@@ -24,15 +24,15 @@ public class StarryTemplate extends AbstractOAuth2ApiBinding implements Starry {
      * This constructor creates the FacebookTemplate using a given access token.
      * @param accessToken An access token given by Facebook after a successful OAuth 2 authentication (or through Facebook's JS library).
      */
-    public StarryTemplate(String accessToken) {
+    public WechatTemplate(String accessToken) {
         this(accessToken, null);
     }
 
-    public StarryTemplate(String accessToken, String applicationNamespace) {
+    public WechatTemplate(String accessToken, String applicationNamespace) {
         this(accessToken, applicationNamespace, null);
     }
 
-    public StarryTemplate(String accessToken, String applicationNamespace, String appId) {
+    public WechatTemplate(String accessToken, String applicationNamespace, String appId) {
         super(accessToken);
         this.applicationNamespace = applicationNamespace;
         this.appId = appId;

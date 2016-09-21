@@ -1,9 +1,9 @@
-package com.github.starry.fw.social.starry.api;
+package com.github.starry.fw.social.wechat.api;
 
 import org.springframework.social.ApiBinding;
 import org.springframework.util.MultiValueMap;
 
-public interface Starry extends ApiBinding {
+public interface Wechat extends ApiBinding {
 
     /**
      * Fetches an object, extracting it into the given Java type

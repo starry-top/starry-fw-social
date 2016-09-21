@@ -1,16 +1,16 @@
-package com.github.starry.fw.social.starry.connect;
+package com.github.starry.fw.social.wechat.connect;
 
 import org.springframework.social.ApiException;
 import org.springframework.social.connect.ApiAdapter;
 import org.springframework.social.connect.ConnectionValues;
 import org.springframework.social.connect.UserProfile;
 
-import com.github.starry.fw.social.starry.api.Starry;
-import com.github.starry.fw.social.starry.api.User;
+import com.github.starry.fw.social.wechat.api.User;
+import com.github.starry.fw.social.wechat.api.Wechat;
 
-public class StarryAdapter implements ApiAdapter<Starry> {
+public class WechatAdapter implements ApiAdapter<Wechat> {
 
-    public boolean test(Starry starry) {
+    public boolean test(Wechat starry) {
         try {
             //starry.userOperations().getUserProfile();
             return true;
@@ -19,7 +19,7 @@ public class StarryAdapter implements ApiAdapter<Starry> {
         }
     }
 //
-    public void setConnectionValues(Starry starry, ConnectionValues values) {
+    public void setConnectionValues(Wechat starry, ConnectionValues values) {
         User profile = starry.fetchObject("me", User.class);
         values.setDisplayName(profile.getUserInfo().getName());
     }
@@ -35,13 +35,13 @@ public class StarryAdapter implements ApiAdapter<Starry> {
 //	}
 
 
-    public UserProfile fetchUserProfile(Starry starry) {
+    public UserProfile fetchUserProfile(Wechat starry) {
         // TODO 自動生成されたメソッド・スタブ
         System.out.println("fetchUserProfile");
         return null;
     }
 
-    public void updateStatus(Starry starry, String message) {
+    public void updateStatus(Wechat starry, String message) {
         // TODO 自動生成されたメソッド・スタブ
         System.out.println("updateStatus");
 

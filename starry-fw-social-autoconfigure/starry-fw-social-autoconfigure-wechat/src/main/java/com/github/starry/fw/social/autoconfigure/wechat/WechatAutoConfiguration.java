@@ -1,4 +1,4 @@
-package com.github.starry.fw.social.autoconfigure.starry;
+package com.github.starry.fw.social.autoconfigure.wechat;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.AutoConfigureAfter;
@@ -23,30 +23,30 @@ import org.springframework.social.connect.ConnectionFactory;
 import org.springframework.social.connect.ConnectionRepository;
 import org.springframework.social.connect.web.GenericConnectionStatusView;
 
-import com.github.starry.fw.social.starry.api.Starry;
-import com.github.starry.fw.social.starry.connect.StarryConnectionFactory;
+import com.github.starry.fw.social.wechat.api.Wechat;
+import com.github.starry.fw.social.wechat.connect.WechatConnectionFactory;
 
 @Configuration
-@ConditionalOnClass({ SocialConfigurerAdapter.class, StarryConnectionFactory.class })
+@ConditionalOnClass({ SocialConfigurerAdapter.class, WechatConnectionFactory.class })
 @ConditionalOnProperty(prefix = "starry.social.starry", name = "app-id")
 @AutoConfigureBefore(SocialWebAutoConfiguration.class)
 @AutoConfigureAfter(WebMvcAutoConfiguration.class)
-public class StarryAutoConfiguration {
+public class WechatAutoConfiguration {
 
     @Configuration
     @EnableSocial
-    @EnableConfigurationProperties(StarryProperties.class)
+    @EnableConfigurationProperties(WechatProperties.class)
     @ConditionalOnWebApplication
     protected static class StarryConfigurerAdapter extends SocialConfigurerAdapter {
 
         @Autowired
-        private StarryProperties properties;
+        private WechatProperties properties;
 
         @Bean
-        @ConditionalOnMissingBean(Starry.class)
+        @ConditionalOnMissingBean(Wechat.class)
         @Scope(value = "request", proxyMode = ScopedProxyMode.INTERFACES)
-        public Starry starry(ConnectionRepository repository) {
-            Connection<Starry> connection = repository.findPrimaryConnection(Starry.class);
+        public Wechat starry(ConnectionRepository repository) {
+            Connection<Wechat> connection = repository.findPrimaryConnection(Wechat.class);
             return connection != null ? connection.getApi() : null;
         }
 
@@ -57,7 +57,7 @@ public class StarryAutoConfiguration {
         }
 
         protected ConnectionFactory<?> createConnectionFactory() {
-            return new StarryConnectionFactory(this.properties.getAppId(), this.properties.getAppSecret());
+            return new WechatConnectionFactory(this.properties.getAppId(), this.properties.getAppSecret());
         }
 
         @Override

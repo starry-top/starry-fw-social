@@ -1,10 +1,10 @@
-package com.github.starry.fw.social.starry.connect;
+package com.github.starry.fw.social.wechat.connect;
 
 import org.springframework.social.connect.support.OAuth2ConnectionFactory;
 
-import com.github.starry.fw.social.starry.api.Starry;
+import com.github.starry.fw.social.wechat.api.Wechat;
 
-public class StarryConnectionFactory extends OAuth2ConnectionFactory<Starry> {
+public class WechatConnectionFactory extends OAuth2ConnectionFactory<Wechat> {
 
     /**
      * Creates a FacebookConnectionFactory for the given application ID and secret.
@@ -12,7 +12,7 @@ public class StarryConnectionFactory extends OAuth2ConnectionFactory<Starry> {
      * @param appId The application's App ID as assigned by Facebook
      * @param appSecret The application's App Secret as assigned by Facebook
      */
-    public StarryConnectionFactory(String appId, String appSecret) {
+    public WechatConnectionFactory(String appId, String appSecret) {
         this(appId, appSecret, null);
     }
 
@@ -22,8 +22,8 @@ public class StarryConnectionFactory extends OAuth2ConnectionFactory<Starry> {
      * @param appSecret The application's App Secret as assigned by Facebook
      * @param appNamespace The application's App Namespace as configured with Facebook. Enables use of Open Graph operations.
      */
-    public StarryConnectionFactory(String appId, String appSecret, String appNamespace) {
-        super("starry", new StarryServiceProvider(appId, appSecret, appNamespace), new StarryAdapter());
+    public WechatConnectionFactory(String appId, String appSecret, String appNamespace) {
+        super("starry", new WechatServiceProvider(appId, appSecret, appNamespace), new WechatAdapter());
     }
 
 }
