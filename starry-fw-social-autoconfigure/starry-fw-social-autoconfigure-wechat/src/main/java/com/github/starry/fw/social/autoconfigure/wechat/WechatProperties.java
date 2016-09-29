@@ -15,6 +15,8 @@ public class WechatProperties {
      */
     private String appSecret;
 
+    private String token;
+
     private String appUrl;
 
     public String getAppId() {
@@ -40,5 +42,15 @@ public class WechatProperties {
     public void setAppUrl(String appUrl) {
         this.appUrl = appUrl;
     }
+
+    public String getToken() {
+        return token;
+    }
+
+    public void setToken(String token) {
+        this.token = token;
+    }
+
+
 
 }
