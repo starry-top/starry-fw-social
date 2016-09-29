@@ -23,6 +23,7 @@
   </dependencyManagement>
 
   <modules>
+    <module>starry-fw-social-starry</module>
     <module>starry-fw-social-wechat</module>
   </modules>
 
