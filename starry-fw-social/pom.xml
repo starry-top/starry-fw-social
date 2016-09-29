@@ -12,7 +12,7 @@
   <artifactId>starry-fw-social</artifactId>
   <packaging>pom</packaging>
 
-  <name>Starry Framework Social</name>
+  <name>Starry Framework Social Parent</name>
   <url>https://github.com/starry-top/starry-fw-social</url>
   <description>The parent of Starry Framework Social</description>
 

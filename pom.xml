@@ -7,7 +7,7 @@
   <version>0.0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
 
-  <name>Starry Framework Social Parent</name>
+  <name>Starry Framework Social All Parent</name>
   <url>https://github.com/starry-top/starry-fw-social</url>
   <description>The parent of Starry Framework Social</description>
 
