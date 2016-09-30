@@ -4,7 +4,7 @@
 
   <parent>
     <groupId>com.github.starry-top</groupId>
-    <artifactId>starry-fw-social-parent</artifactId>
+    <artifactId>starry-fw-social-parentpom</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <relativePath>../pom.xml</relativePath>
   </parent>
@@ -12,7 +12,7 @@
   <artifactId>starry-fw-social-autoconfigure</artifactId>
   <packaging>pom</packaging>
 
-  <name>Starry Framework Social</name>
+  <name>Starry Framework Social AutoConfig Parent Pom</name>
   <url>https://github.com/starry-top/starry-fw-social</url>
   <description>The parent of Starry Framework Social AutoConfigure</description>
 
@@ -23,6 +23,8 @@
   </dependencyManagement>
 
   <modules>
+    <module>starry-fw-social-autoconfigure-parent</module>
+    <module>starry-fw-social-autoconfigure-starry</module>
     <module>starry-fw-social-autoconfigure-wechat</module>
   </modules>
 
