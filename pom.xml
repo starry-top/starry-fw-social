@@ -3,11 +3,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.github.starry-top</groupId>
-  <artifactId>starry-fw-social-parent</artifactId>
+  <artifactId>starry-fw-social-parentpom</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
 
-  <name>Starry Framework Social All Parent</name>
+  <name>Starry Framework Social All Parent Pom</name>
   <url>https://github.com/starry-top/starry-fw-social</url>
   <description>The parent of Starry Framework Social</description>
 
@@ -32,6 +32,12 @@
       <!-- starry-fw-social -->
       <dependency>
         <groupId>com.github.starry-top</groupId>
+        <artifactId>starry-fw-social-parent</artifactId>
+        <version>${starry.social.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>com.github.starry-top</groupId>
         <artifactId>starry-fw-social-starry</artifactId>
         <version>${starry.social.version}</version>
       </dependency>
@@ -43,6 +49,12 @@
       </dependency>
 
       <!-- starry-fw-social-autoconfigure -->
+      <dependency>
+        <groupId>com.github.starry-top</groupId>
+        <artifactId>starry-fw-social-autoconfigure-parent</artifactId>
+        <version>${starry.social.version}</version>
+      </dependency>
+
       <dependency>
         <groupId>com.github.starry-top</groupId>
         <artifactId>starry-fw-social-autoconfigure-starry</artifactId>
